@@ -1,25 +1,44 @@
+// parallax
+.parallax_content {
+  position: fixed;
+	z-index: 1;
+	top:0;
+	height: 100vh;
+}
+
+.parallax_covered {
+	position: relative;
+	z-index: 4;
+	background: $white;
+	margin-top: 100vh;
+}
+
+// Header
 header {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr!important;
   grid-template-rows:1;
-  height: 100vh;
+  position: fixed;
+  top:0;
 
-  .header__bg img {
-    //display: block;
-    width: 100%;
-    position: absolute;
+  .header__bg {
+    position: fixed;
     top:0;
-    z-index: 1;
-    opacity: 0.8;
+    z-index: 2;
+
+      img {
+      width: 100%;
+      opacity: 0.5;
+
+    }
   }
 
   .header__logo {
-    z-index: 2;
-    margin-top: 25vh;
-    margin-left: 20px;
+    margin-top: 10vh;
     grid-column: 3 / 7;
-
     img {
+      z-index: 3;
       width: 100%;
+      opacity: 1;
     }
     //@media screen and (min-width: medium) {
       //width: 500px;
