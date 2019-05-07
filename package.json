@@ -8,11 +8,11 @@
     "build": "gulp build --production"
   },
   "author": "ZURB <foundation@zurb.com>",
-  "license": "MIT",
   "dependencies": {
     "foundation-sites": "^6.5.1",
-    "jquery": "^3.2.1",
+    "jquery": "^3.4.0",
     "motion-ui": "^2.0.3",
+    "tar": "^4.4.2",
     "what-input": "^5.1.2"
   },
   "devDependencies": {
@@ -53,5 +53,6 @@
     "url": "https://github.com/zurb/foundation-sites/issues",
     "email": "foundation@zurb.com"
   },
+  "license": "MIT",
   "private": true
 }
