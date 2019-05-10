@@ -16,19 +16,19 @@
 <div class="parallax_content">
     {{> header}}
 </div>
-<div class="parallax_covered grid_container">
+<div class="parallax_covered grid_container main">
 
-  <div class="main_nav">
-  {{> nav}}
+  <div class="main__nav">
+    {{> nav}}
   </div>
 
     {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-    <div class="main">
-    {{> body}}
+    <div class="main__body">
+      {{> body}}
     </div>
-    
+
     {{> footer}}
-  </div>
+</div>
 
 
   <script src="{{root}}assets/js/app.js"></script>

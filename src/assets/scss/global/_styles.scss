@@ -50,8 +50,8 @@ header {
 
 
 // Grid areas
-.main_nav { grid-area: nav; }
-.main { grid-area: main; }
+.main__nav { grid-area: nav; }
+.main__body { grid-area: main; }
 footer { grid-area: footer; }
 
 .grid_container {
@@ -71,6 +71,11 @@ footer {
 
 footer {
   grid-row: 6;
+}
+
+// Main content area
+.main {
+  padding: 2rem;
 }
 
 // Footer

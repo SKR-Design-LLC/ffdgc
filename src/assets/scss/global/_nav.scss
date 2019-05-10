@@ -1,4 +1,8 @@
 // Nav - Navigation below header
-.main_nav {
-  grid-column: 1 / 6;
+#main__nav_ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: stretch;
+
 }
