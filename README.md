@@ -2,7 +2,7 @@
 Foothill Flyers Website
 https://github.com/cndblackbear/ffdgc
 
-Build by SKR Design LLC
+Build by SKR Design LLC (http://www.skrdesign.com)
 
 Base is Foundation 6 (https://foundation.zurb.com/) with yarn (https://yarnpkg.com) package manager.
 Use zurb/foundation-cli (https://github.com/zurb/foundation-cli) on github to run commands; watch and build project.
@@ -15,3 +15,7 @@ Node v10.15.3
 - On ffdgc folder open command line and run "yarn install"
 - Run "foundation watch" so that gulp is run.
 - Then run "foundation build" to build out "dist" folder
+
+Build
+CSS Grid based with Flexbox.
+Mobile first, responsive.

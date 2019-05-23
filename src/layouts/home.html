@@ -1,4 +1,4 @@
-{{!-- This is the base layout for your project, and will be used on every INTERNAL page, except index/home. --}}
+{{!-- This is the base layout the HOMEPAGE. Interior pages will use layout - default. --}}
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -6,15 +6,19 @@
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}} - Foothill Flyers Disc Golf Club - Pine, Colorado</title>
+    <title>Foothill Flyers Disc Golf Club - Pine, Colorado</title>
     <link href="https://fonts.googleapis.com/css?family=Taviraj:400,400i,700,700i|Yeseva+One&display=optional" rel="stylesheet">
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
-
   </head>
 
   <body>
 
-  <div class="grid_container main" id="pageTop">
+
+    <div class="parallax_content">
+        {{> header}}
+    </div>
+
+    <div class="parallax_covered grid_container main" id="pageTop">
 
         {{> nav}}
 
@@ -25,29 +29,9 @@
 
         {{> footer}}
 
-  </div>
+    </div>
 
   <script src="{{root}}assets/js/app.js"></script>
-
-
-  <!-- <script>
-
-
-  function changeTitle() {
-      //var tag = $(document).prop('title');
-      $(document).uppercase('title');
-  }
-  changeTitle();
-  </script>-->
-
-  <!-- HANDLEBARS TEMPLATE -->
-  <!--   <script>
-    Handlebars.registerHelper("title", function(fn) {
-      $('h1').html(fn(this));
-
-      return "";
-    });
-  </script> -->
 
   </body>
 </html>

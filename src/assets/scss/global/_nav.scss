@@ -1,8 +1,36 @@
 // Nav - Navigation below header
+nav {
+  position: fixed;
+}
+
 #main__nav_ul {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
+  grid-auto-flow: column;
   justify-items: stretch;
+  align-items: center;
+  text-align: center;
+
+
+  a {
+    color: $white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+
+  background-color: $primary-color;
+  padding: 1rem 0;
+
+
+  img {
+    max-width: 10rem;
+  }
 
 }
+
+
+// .is-stuck {
+//
+// }
