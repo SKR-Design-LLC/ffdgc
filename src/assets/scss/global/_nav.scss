@@ -1,13 +1,14 @@
 // Nav - Navigation below header
 nav {
   position: fixed;
+  width: 100%;
 }
 
 #main__nav_ul {
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-auto-flow: column;
   justify-items: stretch;
   align-items: center;
   text-align: center;
