@@ -19,35 +19,24 @@
         {{> nav}}
 
         {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-        <div class="main__body">
-          {{> body}}
-        </div>
+        <div class="main__container">
+          <div class="main__top_image">
+            <img src="{{root}}/assets/img/{{top-image}}" alt="{{top-image-alt}}">
+          </div>
 
+          <div class="main__body">
+          <h1>{{title}}</h1>
+
+            <div class="editable">
+              {{> body}}
+            </div>
+          </div>
+        </div>
         {{> footer}}
 
   </div>
 
   <script src="{{root}}assets/js/app.js"></script>
-
-
-  <!-- <script>
-
-
-  function changeTitle() {
-      //var tag = $(document).prop('title');
-      $(document).uppercase('title');
-  }
-  changeTitle();
-  </script>-->
-
-  <!-- HANDLEBARS TEMPLATE -->
-  <!--   <script>
-    Handlebars.registerHelper("title", function(fn) {
-      $('h1').html(fn(this));
-
-      return "";
-    });
-  </script> -->
 
   </body>
 </html>

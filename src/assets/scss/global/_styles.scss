@@ -1,8 +1,4 @@
 
-body {
-  padding: 0;
-  margin: 0;
-}
 // parallax
 .parallax_content {
   position: fixed;
@@ -59,14 +55,14 @@ header {
 
 // Grid areas
 nav { grid-area: nav; }
-.main__body { grid-area: main; }
+.main__container { grid-area: main; }
 footer { grid-area: footer; }
 
 .grid_container {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr auto 1fr;
+  grid-template-rows: auto auto auto;
   grid-auto-flow: row;
   grid-template-areas:
     'nav nav nav nav nav nav'
@@ -75,16 +71,23 @@ footer { grid-area: footer; }
 }
 
 
-
+.main__top_image {
+  margin-top: 125px;
+  img {
+    height: 300px;
+    width: 100%;
+  }
+}
 // Main content area
 .main__body {
-  padding: 0 6rem 2rem 6rem;
+  margin-top:2rem;
+  padding: 0rem 20% 2rem 20%;
 }
 
 
 // Footer
 footer {
-  padding: 3rem 6rem 0 6rem;
+  padding: 3rem 20% 2rem 20%;
   font-style: italic;
   color: darken($primary-color, 3%);
 
