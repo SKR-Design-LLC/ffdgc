@@ -83,3 +83,11 @@ ul.inline {
     display: inline-block;
   }
 }
+
+.screen_reader_accessible {
+  display: none;
+  width:0;
+  height: 0;
+  color: $black;
+  background: $white;
+}

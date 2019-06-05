@@ -7,7 +7,8 @@ nav {
 }
 
 #home {
-  nav {
+  nav.sticky_nav {
+    height: 128px;
     position: relative;
   }
 }
@@ -22,7 +23,7 @@ nav {
 
 
   background-color: $primary-color;
-
+  opacity: 0.8;
   margin:0;
   padding: 0;
 
@@ -30,6 +31,7 @@ nav {
   li {
     padding: 1rem 0;
     background: $primary-color;
+
     &:hover {
       background: $white;
       border-radius: 50%;

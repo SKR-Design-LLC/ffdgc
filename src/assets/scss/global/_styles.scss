@@ -55,14 +55,14 @@ header {
 
 // Grid areas
 nav { grid-area: nav; }
-.main__container { grid-area: main; }
+.main__container, .main__body { grid-area: main; }
 footer { grid-area: footer; }
 
 .grid_container {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto;
   grid-auto-flow: row;
   grid-template-areas:
     'nav nav nav nav nav nav'
@@ -71,7 +71,7 @@ footer { grid-area: footer; }
 }
 
 
-.main__top_image {
+.main__top_image editable {
   margin-top: 125px;
   img {
     height: 300px;
@@ -87,15 +87,16 @@ footer { grid-area: footer; }
 
 // Footer
 footer {
+  background: #418FC4 url("/assets/img/Foothill_Flyers_Disc_Golf_Logo_Mountain.svg") no-repeat center top;
   padding: 3rem 20% 2rem 20%;
+  color: $white;
   font-style: italic;
-  color: darken($primary-color, 3%);
 
   nav.footer__nav {
     position: relative;
 
     a {
-      color: darken($primary-color, 3%);
+      color: $white;
     }
 
   }
