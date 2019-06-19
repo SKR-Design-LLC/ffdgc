@@ -21,9 +21,9 @@ var stickyTop = $('.sticky_nav').offset().top;
 $(window).on( 'scroll', function(){
         if ($(window).scrollTop() >= stickyTop) {
             $('.sticky_nav').css({position: "fixed", top: "0px"});
-            $('.main__body').css({padding: "6rem 20% 2rem 20%"});
+            $('.home_body').css({padding: "5.3rem 20% 2rem 20%"});
         } else {
             $('.sticky_nav').css({position: "relative", top: "0px"});
-            $('.main__body').css({padding: "0rem 20% 2rem 20%"});
+            $('.home_body').css({padding: "0rem 20% 2rem 20%"});
         }
     });

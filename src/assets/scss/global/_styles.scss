@@ -80,15 +80,15 @@ footer { grid-area: footer; }
 }
 // Main content area
 .main__body {
-  margin-top:2rem;
+  margin-top:1.8rem;
   padding: 0rem 20% 2rem 20%;
 }
 
 
 // Footer
 footer {
-  background: #418FC4 url("/assets/img/Foothill_Flyers_Disc_Golf_Logo_Mountain.svg") no-repeat center top;
-  padding: 3rem 20% 2rem 20%;
+  background: #418fc4 url("/assets/img/footer_logo_mountains_white_top.png") no-repeat center top;
+  padding: 8rem 20% 2rem 20%;
   color: $white;
   font-style: italic;
 
