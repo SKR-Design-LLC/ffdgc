@@ -111,10 +111,15 @@ footer { grid-area: footer; }
 // Main content area
 .main__body {
   margin-top:1.8rem;
+}
+
+.main_body__content_area {
   padding: 0rem 20% 2rem 20%;
 }
 
-
+.main_body__content_area__gallery {
+  
+}
 // Footer
 footer {
   background: #418fc4 url("/assets/img/footer_logo_mountains_white_top.png") no-repeat center top;

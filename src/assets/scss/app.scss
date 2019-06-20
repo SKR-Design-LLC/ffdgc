@@ -91,3 +91,8 @@ ul.inline {
   color: $black;
   background: $white;
 }
+
+.list__no_dots {
+  list-style: none;
+  margin-left: 0;
+}

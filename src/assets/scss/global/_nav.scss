@@ -31,14 +31,10 @@ nav {
   li {
     padding: .4rem 0;
     background: $primary-color;
-
-    &:hover {
-
-      border-radius: 80%;
-      a {
-        //color: $primary-color;
+    a {
+      text-decoration: none;
+      &:hover {
         text-decoration: underline;
-
       }
     }
     &.nav__logo:hover {
