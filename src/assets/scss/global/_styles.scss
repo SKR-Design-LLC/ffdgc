@@ -11,71 +11,10 @@
 	position: relative;
 	z-index: 4;
 	background: $white;
+  margin-top: 50vh;
+  @include breakpoint(medium) {
 	margin-top: 100vh;
-}
-
-// Header
-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr!important;
-  grid-template-rows:1;
-  position: fixed;
-  top:0;
-  width: 100%;
-
-
-  .header__bg {
-    position: fixed;
-    top:0;
-    z-index: 2;
-
-    img {
-      width: 100%;
-      opacity: 0.4;
-    }
   }
-
-  .header__logo {
-    padding-top: 10vh;
-    grid-column: 1 / 9;
-    background-color: #105C8E;//#1476B8;
-    height: 100vh;
-    img {
-      z-index: 3;
-      opacity: 1;
-      width: 100%;
-    }
-
-    .header__arrow_down {
-        margin: 0 auto;
-        margin-top: 1rem;
-        width: 0;
-        height: 0;
-        border-left: 3.75rem solid transparent;
-        border-right: 3.75rem solid transparent;
-        border-top: 4.25rem solid #fff;
-        .header__scroll {
-          position: relative;
-          top: -3.35rem;
-          left: -1.4rem;
-          p {
-            font-family: $header-font-family;
-            text-transform: uppercase;
-            text-align: center;
-            line-height: .04;
-            letter-spacing: .04rem;
-            &:nth-child(2) {
-              letter-spacing: .095rem;
-            }
-          }
-        }
-    }
-
-  }
-
-
-
-
 }
 
 
@@ -94,60 +33,4 @@ footer { grid-area: footer; }
     'nav nav nav nav nav nav'
     'main main main main main main'
     'footer footer footer footer footer footer';
-}
-
-
-.main__top_image {
-  img {
-    min-height: 300px;
-    width: 100vw;
-  }
-
-  figcaption {
-    font-size: small;
-    font-style: italic;
-  }
-}
-// Main content area
-.main__body {
-  margin-top:1.8rem;
-}
-
-.main_body__content_area {
-  padding: 0rem 20% 2rem 20%;
-}
-
-.main_body__content_area__gallery {
-  
-}
-// Footer
-footer {
-  background: #418fc4 url("/assets/img/footer_logo_mountains_white_top.png") no-repeat center top;
-  padding: 8rem 20% 2rem 20%;
-  font-family: $header-font-family;
-  color: $white;
-  //font-style: italic;
-  ul {
-    list-style: none;
-    margin-left: 0;
-    li {
-      width:30%;
-    }
-  }
-
-  nav.footer__nav {
-    position: relative;
-
-    ul {
-      list-style: none;
-      margin-left: 0;
-    }
-    li {
-      display: inline-block;
-    }
-    a {
-      color: $white;
-    }
-
-  }
 }

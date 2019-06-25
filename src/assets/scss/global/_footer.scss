@@ -1,0 +1,31 @@
+// Footer
+footer {
+  background: #418fc4 url("/assets/img/footer_logo_mountains_white_top.png") no-repeat center top;
+  padding: 8rem 20% 2rem 20%;
+  font-family: $header-font-family;
+  color: $white;
+  //font-style: italic;
+  ul {
+    list-style: none;
+    margin-left: 0;
+    li {
+      width:30%;
+    }
+  }
+
+  nav.footer__nav {
+    position: relative;
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      color: $white;
+    }
+
+  }
+}

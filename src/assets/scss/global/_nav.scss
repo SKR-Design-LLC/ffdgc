@@ -4,59 +4,126 @@ nav {
   width: 100%;
   margin:0;
   padding: 0;
+  font-family: $header-font-family;
+  background: $primary-color;
+  opacity: 0.8;
+  color: $white;
+
+
+  .mobil_nav__base {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
+  }
+
+  img {
+    max-width: 10rem;
+  }
+
+}
+.mobil_nav__base {
+padding: 0 .5rem;
+}
+
+
+.nav__logo__mobile {
+  padding-top: .5rem;
+  place-self: center start;
+}
+
+.main_nav__mobile_menu {
+  font-size: 1.5rem;
+  justify-self: end;
+  place-self: center end;
+}
+
+.main_nav__mobile_menu_arrows {
+  display: inline-block;
+  transform: rotate(90deg);
+  &.up {
+    transform: rotate(270deg);
+  }
 }
 
 #home {
-  nav.sticky_nav {
+  nav.main_nav {
     height: 108px;
     position: relative;
   }
 }
 
 #main__nav_ul {
+
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  justify-items: stretch;
-  align-items: center;
-  text-align: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
 
-
-  background-color: $primary-color;
   opacity: 0.8;
-  margin:0;
+
+
+  margin:.5rem 0 0 0;
   padding: 0;
+  text-align: right;
+
+  justify-content: end;
+
+
+  @include breakpoint(medium) {
+    background-color: $primary-color;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    align-items: center;
+    text-align: center;
+  }
 
 
   li {
-    padding: .4rem 0;
-    background: $primary-color;
+    padding: .4rem .7rem;
+    width: 12rem;
+    background-color: orange;
+    @include breakpoint(medium) {
+
+    }
     a {
+      color: #000;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
       }
     }
-    &.nav__logo:hover {
-      padding: 0;
-      margin: .4rem 0;
+    &.nav__logo {
+      display: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+      &:hover {
+        padding: 0;
+        margin: .4rem 0;
+      }
+      &__mobile {
+        display: block;
+        &:hover {
+          padding: 0;
+          margin: .4rem 0;
+        }
+        @include breakpoint(medium) {
+          display: none;
+        }
+      }
     }
+
   }
 
   a {
     color: $white;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
     letter-spacing: .1rem;
     text-transform: uppercase;
-    font-family: $header-font-family;
+
   }
 
-
-
-
-  img {
-    max-width: 10rem;
-  }
 
 }
 

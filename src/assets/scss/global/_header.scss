@@ -1,0 +1,82 @@
+// Header
+header {
+  display: grid;
+  grid-template-columns: 1fr!important;
+  grid-template-rows:1;
+  position: fixed;
+  top:0;
+  width: 100vw;
+
+
+  .header__bg {
+    position: fixed;
+    top:0;
+    z-index: 2;
+    width: 100%;
+    float:left;
+    @include breakpoint(medium) {
+
+      width: 100vw;
+    }
+
+
+    img {
+      opacity: 0.4;
+
+
+      @include breakpoint(medium) {
+        height: 100vh;
+        width: 100vw;
+      }
+
+    }
+  }
+
+  .header__logo {
+    padding-top: 5vh;
+    grid-column: 1 / 9;
+    background-color: #105C8E;//#1476B8;
+
+    @include breakpoint(medium) {
+      height: 100vh;
+    }
+
+    img {
+      z-index: 3;
+      opacity: 1;
+      width: 100%;
+    }
+
+    .header__scroll  {
+      color: transparent;
+    }
+    @include breakpoint(medium) {
+      .header__arrow_down {
+          margin: 0 auto;
+          margin-top: 1rem;
+          width: 0;
+          height: 0;
+          border-left: 3.75rem solid transparent;
+          border-right: 3.75rem solid transparent;
+          border-top: 4.25rem solid #fff;
+          .header__scroll {
+            position: relative;
+            top: -3.35rem;
+            left: -1.4rem;
+            p {
+              font-family: $header-font-family;
+              text-transform: uppercase;
+              text-align: center;
+              line-height: .04;
+              letter-spacing: .04rem;
+              &:nth-child(2) {
+                letter-spacing: .095rem;
+              }
+            }
+          }
+      }
+    }
+  }
+
+
+}

@@ -7,7 +7,12 @@
 @import 'global/_typography';
 @import 'settings';
 @import 'global/_styles';
+@import 'global/_header';
 @import 'global/_nav';
+@import 'global/_box_image_gallery';
+@import 'global/_subpages';
+@import 'global/_footer';
+
 
 // Global styles
 @include foundation-global-styles;

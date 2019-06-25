@@ -1,0 +1,33 @@
+
+// Subpage top image
+.main__top_image {
+  img {
+    min-height: 300px;
+    width: 100vw;
+  }
+
+  figcaption {
+    font-size: small;
+    font-style: italic;
+  }
+}
+
+
+// Main content area
+.main__body {
+  margin-top:1.8rem;
+}
+
+.main_body__content_area {
+  padding: 0rem 20% 2rem 20%;
+}
+
+// Individual subpage code
+#courses {
+  img {
+    width: 50%;
+  }
+  img.image__width_40 {
+    width: 40%;
+  }
+}
