@@ -10,124 +10,147 @@ nav {
   color: $white;
 
 
-  .mobil_nav__base {
+  .mobile_nav__base {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: auto auto;
   }
 
   img {
-    max-width: 10rem;
+    max-width: 8rem;
+    @include breakpoint(small) {
+      max-width: 10rem;
+    }
   }
 
-}
-.mobil_nav__base {
-padding: 0 .5rem;
-}
-
-
-.nav__logo__mobile {
-  padding-top: .5rem;
-  place-self: center start;
-}
-
-.main_nav__mobile_menu {
-  font-size: 1.5rem;
-  justify-self: end;
-  place-self: center end;
-}
-
-.main_nav__mobile_menu_arrows {
-  display: inline-block;
-  transform: rotate(90deg);
-  &.up {
-    transform: rotate(270deg);
-  }
-}
-
-#home {
-  nav.main_nav {
+  .mobile_nav__base {
     height: 108px;
-    position: relative;
+    margin: 0 .5rem -.5rem .5rem;
+    @include breakpoint(medium) {
+      height: 0;
+    }
+
   }
+
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+  }
+
+
+  .nav__logo__mobile {
+    place-self: center start;
+
+    display: block;
+    /* Hide the link that should open and close the topnav on small screens */
+    @include breakpoint(medium) {
+      display: none;
+    }
+
+  }
+
+  .main_nav__mobile_menu {
+    font-size: 1.5rem;
+    justify-self: end;
+    place-self: center end;
+    button {
+      color: $white;
+      display: block;
+      /* Hide the link that should open and close the topnav on small screens */
+      @include breakpoint(medium) {
+        display: none;
+      }
+    }
+
+  }
+
+  .main_nav__mobile_menu_arrows {
+    display: inline-block;
+    transform: rotate(90deg);
+    &.up {
+      transform: rotate(270deg);
+    }
+  }
+/* end nav */
 }
 
-#main__nav_ul {
-
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto auto auto;
-
-  opacity: 0.8;
-
-
-  margin:.5rem 0 0 0;
-  padding: 0;
-  text-align: right;
-
-  justify-content: end;
-
-
-  @include breakpoint(medium) {
-    background-color: $primary-color;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    justify-items: stretch;
-    align-items: center;
-    text-align: center;
+  #home {
+    nav.main_nav {
+      height: 108px;
+      position: relative;
+    }
   }
 
+  #main__nav_ul {
 
-  li {
-    padding: .4rem .7rem;
-    width: 12rem;
-    background-color: orange;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    opacity: 0.8;
+    margin:.5rem 0 0 0;
+    padding: 0;
+    text-align: right;
+    justify-content: end;
+
+    display: none;
+
+
     @include breakpoint(medium) {
+      display: block;
+      background-color: $primary-color;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr;
+      justify-items: stretch;
+      align-items: center;
+      text-align: center;
+    }
 
-    }
-    a {
-      color: #000;
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-    &.nav__logo {
-      display: none;
+
+    li {
+      padding: .4rem .7rem;
+      width: 12rem;
+      background-color: orange;
       @include breakpoint(medium) {
-        display: block;
+        background-color: transparent;
       }
-      &:hover {
-        padding: 0;
-        margin: .4rem 0;
+      a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
       }
-      &__mobile {
-        display: block;
+      &.nav__logo {
+        display: none;
+        @include breakpoint(medium) {
+          display: block;
+        }
         &:hover {
           padding: 0;
           margin: .4rem 0;
         }
-        @include breakpoint(medium) {
-          display: none;
+        &__mobile {
+          display: block;
+          &:hover {
+            padding: 0;
+            margin: .4rem 0;
+          }
+          @include breakpoint(medium) {
+            display: none;
+          }
         }
       }
+
     }
 
+    a {
+      color: $white;
+      font-size: 1.75rem;
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+
+    }
+
+
   }
-
-  a {
-    color: $white;
-    font-size: 1.75rem;
-    letter-spacing: .1rem;
-    text-transform: uppercase;
-
-  }
-
-
-}
-
-
-// .is-stuck {
-//
-// }

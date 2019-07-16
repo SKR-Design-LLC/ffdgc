@@ -27,3 +27,13 @@ $(window).on( 'scroll', function(){
             $('.home_body').css({padding: "0 0 2rem 0"});
         }
     });
+
+
+    function dropMenu() {
+      var x = document.getElementById("main__nav_ul");
+      if (x.className === "dropdown-content") {
+        x.className += " responsive up";
+      } else {
+        x.className = "dropdown-content";
+      }
+    }
