@@ -1,10 +1,13 @@
-<nav class="main_nav">
+<nav class="main_nav sticky_nav">
 
   <div class="mobile_nav__base">
     <a href="{{root}}/index.html" class="nav__logo__mobile"><img src="{{root}}/assets/img/Foothill_Flyers_Disc_Golf_Logo.svg" alt="Foothill Flyers Disc Golf Club Logo"></a>
 
     <div class="main_nav__mobile_menu">
-      <button onclick="dropMenu()" class="dropbtn">Menu&nbsp;<span class="main_nav__mobile_menu_arrows">&#62;&#62;</span></button>
+      <button class="dropbtn">Menu&nbsp;
+        <div class="main_nav__mobile_menu_arrows show-inline">&#62;&#62;</div>
+        <div class="main_nav__mobile_menu_close show-inline">&#88;</div>
+      </button>
     </div>
   </div>
 

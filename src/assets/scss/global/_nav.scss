@@ -8,6 +8,7 @@ nav {
   background: $primary-color;
   opacity: 0.8;
   color: $white;
+  z-index: 10;
 
 
   .mobile_nav__base {
@@ -56,23 +57,29 @@ nav {
     button {
       color: $white;
       display: block;
+
+      &:hover {
+        color: orange;
+        cursor: pointer;
+      }
       /* Hide the link that should open and close the topnav on small screens */
       @include breakpoint(medium) {
         display: none;
+      }
+
+      .main_nav__mobile_menu_arrows {
+        display: inline-block;
+        transform: rotate(90deg);
+      }
+      .main_nav__mobile_menu_close {
+        display: inline-block;
       }
     }
 
   }
 
-  .main_nav__mobile_menu_arrows {
-    display: inline-block;
-    transform: rotate(90deg);
-    &.up {
-      transform: rotate(270deg);
-    }
-  }
-/* end nav */
 }
+/* end nav */
 
   #home {
     nav.main_nav {
@@ -83,7 +90,7 @@ nav {
 
   #main__nav_ul {
 
-    display: grid;
+    display: none;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
     opacity: 0.9;
@@ -92,8 +99,12 @@ nav {
     text-align: right;
     justify-content: end;
 
-    @include breakpoint(medium) {
+    &.responsive {
+      display: grid;
+    }
 
+    @include breakpoint(medium) {
+      display: grid;
       background-color: $primary-color;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;

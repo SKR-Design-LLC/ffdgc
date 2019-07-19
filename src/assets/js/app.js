@@ -16,24 +16,20 @@ require('foundation-sites');
 
 $(document).foundation();
 
-var stickyTop = $('.sticky_nav').offset().top;
 
-$(window).on( 'scroll', function(){
+$(window).on("scroll", function(e){
+  var stickyTop = $(".sticky_nav").offset().top;
         if ($(window).scrollTop() >= stickyTop) {
-            $('.sticky_nav').css({position: "fixed", top: "0px"});
-            $('.home_body').css({padding: "5.2rem 0 2rem 0"});
+            $(".sticky_nav").css({position: "fixed", top: "0px"});
+            $(".home_body").css({padding: "5.2rem 0 2rem 0"});
         } else {
-            $('.sticky_nav').css({position: "relative", top: "0px"});
-            $('.home_body').css({padding: "0 0 2rem 0"});
+            $(".sticky_nav").css({position: "relative", top: "0px"});
+            $(".home_body").css({padding: "0 0 2rem 0"});
         }
-    });
+});
 
-
-    function dropMenu() {
-      var x = document.getElementById("main__nav_ul");
-      if (x.className === "dropdown-content") {
-        x.className += " responsive up";
-      } else {
-        x.className = "dropdown-content";
-      }
-    }
+$(".dropbtn").on("click", function() {
+  $(".dropdown-content").toggleClass("responsive");
+  $(".main_nav__mobile_menu_arrows").toggleClass("show-inline hide");
+  $(".main_nav__mobile_menu_close").toggleClass("show-inline hide");
+});
