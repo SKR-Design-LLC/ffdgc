@@ -57,7 +57,9 @@ nav {
     button {
       color: $white;
       display: block;
-
+      &.yellow {
+        color: orange
+      }
       &:hover {
         color: orange;
         cursor: pointer;
@@ -67,12 +69,12 @@ nav {
         display: none;
       }
 
-      .main_nav__mobile_menu_arrows {
+      .main_nav__mobile_menu_arrows, .main_nav__mobile_menu_close {
         display: inline-block;
-        transform: rotate(90deg);
+        width: 27px;
       }
-      .main_nav__mobile_menu_close {
-        display: inline-block;
+      .main_nav__mobile_menu_arrows {
+        transform: rotate(90deg);
       }
     }
 

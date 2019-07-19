@@ -32,4 +32,5 @@ $(".dropbtn").on("click", function() {
   $(".dropdown-content").toggleClass("responsive");
   $(".main_nav__mobile_menu_arrows").toggleClass("show-inline hide");
   $(".main_nav__mobile_menu_close").toggleClass("show-inline hide");
+  $(".dropbtn").toggleClass("yellow");
 });

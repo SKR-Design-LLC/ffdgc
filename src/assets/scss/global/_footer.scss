@@ -15,7 +15,8 @@ footer {
 
   nav.footer__nav {
     position: relative;
-
+    background-color: transparent;
+    z-index: 4;
     ul {
       list-style: none;
       margin-left: 0;
