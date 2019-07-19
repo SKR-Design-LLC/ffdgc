@@ -86,38 +86,46 @@ nav {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto auto auto auto;
-    opacity: 0.8;
+    opacity: 0.9;
     margin:.5rem 0 0 0;
     padding: 0;
     text-align: right;
     justify-content: end;
 
-    display: none;
-
-
     @include breakpoint(medium) {
-      display: block;
+
       background-color: $primary-color;
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       justify-items: stretch;
       align-items: center;
       text-align: center;
+      justify-content: space-around;
     }
 
 
     li {
       padding: .4rem .7rem;
-      width: 12rem;
       background-color: orange;
+      @include breakpoint(small only) {
+        width: 12rem;
+      }
       @include breakpoint(medium) {
         background-color: transparent;
       }
+
       a {
-        color: #000;
+        color: $black;
+        @include breakpoint(medium) {
+          color: $white;
+        }
         text-decoration: none;
         &:hover {
+          opacity: 1;
+          color: $primary-color;
+          @include breakpoint(medium) {
+            color: orange;
+          }
           text-decoration: underline;
         }
       }
@@ -126,16 +134,8 @@ nav {
         @include breakpoint(medium) {
           display: block;
         }
-        &:hover {
-          padding: 0;
-          margin: .4rem 0;
-        }
         &__mobile {
           display: block;
-          &:hover {
-            padding: 0;
-            margin: .4rem 0;
-          }
           @include breakpoint(medium) {
             display: none;
           }
