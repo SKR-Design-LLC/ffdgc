@@ -4,7 +4,6 @@
 @import 'foundation';
 @import 'motion-ui';
 
-@import 'global/_typography';
 @import 'settings';
 @import 'global/_styles';
 @import 'global/_header';
@@ -12,7 +11,6 @@
 @import 'global/_box_image_gallery';
 @import 'global/_subpages';
 @import 'global/_footer';
-
 
 // Global styles
 @include foundation-global-styles;
@@ -87,6 +85,11 @@ ul.inline {
   li {
     display: inline-block;
   }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  letter-spacing: .05rem;
 }
 
 .screen_reader_accessible {

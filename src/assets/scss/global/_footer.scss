@@ -1,10 +1,33 @@
 // Footer
+
 footer {
-  background: #418fc4 url("/assets/img/footer_logo_mountains_white_top.png") no-repeat center top;
-  padding: 8rem 20% 2rem 20%;
+  background: #418fc4 url("/assets/img/Mountains_from_logo_for_footer_short.png") top center no-repeat;
+  background-size: 100vw;
+
+  padding: 10rem 20% 2rem 20%;
   font-family: $header-font-family;
   color: $white;
-  //font-style: italic;
+  a {
+    color: $white;
+  }
+
+  .footer__nav { grid-area: ft_nav; }
+  .footer__interior_fb { grid-area: fb; }
+  .footer__interior_copyright { grid-area: copy; }
+  .footer__interior_description { grid-area: description; }
+
+  .footer__interior {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-auto-flow: row;
+    grid-template-areas:
+      'ft_nav ft_nav ft_nav ft_nav'
+      'fb fb fb fb'
+      'copy copy copy copy'
+      'description description description description';
+  }
+
   ul {
     list-style: none;
     margin-left: 0;
@@ -17,15 +40,13 @@ footer {
     position: relative;
     background-color: transparent;
     z-index: 4;
+    opacity:1;
     ul {
       list-style: none;
       margin-left: 0;
     }
     li {
       display: inline-block;
-    }
-    a {
-      color: $white;
     }
 
   }
