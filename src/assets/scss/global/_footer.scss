@@ -3,30 +3,40 @@
 footer {
   background: #418fc4 url("/assets/img/Mountains_from_logo_for_footer_short.png") top center no-repeat;
   background-size: 100vw;
-
-  padding: 10rem 20% 2rem 20%;
+  padding: 5rem 2rem 1rem 2rem;
+  @include breakpoint(medium) {
+  padding: 10rem 3rem 2rem 3rem;
+  }
   font-family: $header-font-family;
   color: $white;
   a {
     color: $white;
+    white-space: nowrap;
+    &:hover {
+      color: orange;
+    }
   }
 
   .footer__nav { grid-area: ft_nav; }
-  .footer__interior_fb { grid-area: fb; }
-  .footer__interior_copyright { grid-area: copy; }
-  .footer__interior_description { grid-area: description; }
+  .footer__interior_fb { grid-area: ft_fb;}
+  .footer__interior_description { grid-area: ft_description; }
 
   .footer__interior {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-auto-flow: row;
     grid-template-areas:
-      'ft_nav ft_nav ft_nav ft_nav'
-      'fb fb fb fb'
-      'copy copy copy copy'
-      'description description description description';
-  }
+      'ft_nav'
+      'ft_fb'
+      'ft_description';
+      @include breakpoint(medium) {
+        grid-template-columns: 2fr 4fr 2fr;
+        align-items: space-between;
+        justify-content: space-between;
+        grid-template-areas:
+          'ft_nav ft_description ft_fb'
+      }
 
   ul {
     list-style: none;
@@ -39,15 +49,36 @@ footer {
   nav.footer__nav {
     position: relative;
     background-color: transparent;
+    justify-self: start;
+    padding-bottom: 1rem;
     z-index: 4;
     opacity:1;
-    ul {
-      list-style: none;
-      margin-left: 0;
-    }
-    li {
-      display: inline-block;
-    }
-
   }
+
+
+  &_description {
+    font-size: .8rem;
+    @include breakpoint(medium) {
+      text-align: center;
+    }
+    .copyright {
+      font-size: .7rem;
+      font-style: italic;
+    }
+  }
+
+  .footer__interior_fb {
+    padding-bottom: 2rem;
+    @include breakpoint(medium) {
+      text-align: right;
+    }
+    .facebook_icon {
+      font-size: 3rem;
+    }
+  }
+
+
+}
+
+
 }
