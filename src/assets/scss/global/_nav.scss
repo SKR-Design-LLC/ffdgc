@@ -133,7 +133,7 @@ nav {
         text-decoration: none;
         &:hover {
           opacity: 1;
-          color: darken($secondary-color, 8%);
+          color:#0a3055;
           @include breakpoint(medium) {
             color: $dark-black;
           }
