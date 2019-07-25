@@ -147,15 +147,15 @@ $header-font-weight: $global-weight-bold;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.15;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.25;
+$header-margin-bottom: 1rem;
 $header-styles: (
   small: (
-    'h1': ('font-size': 24),
-    'h2': ('font-size': 20),
-    'h3': ('font-size': 19),
-    'h4': ('font-size': 18),
-    'h5': ('font-size': 17),
+    'h1': ('font-size': 40),
+    'h2': ('font-size': 36),
+    'h3': ('font-size': 32),
+    'h4': ('font-size': 28),
+    'h5': ('font-size': 25),
     'h6': ('font-size': 21),
   ),
   medium: (

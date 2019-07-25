@@ -5,7 +5,6 @@
   }
 }
 
-
 // Subpage top image
 .main__top_image {
   img {
@@ -26,7 +25,20 @@
 }
 
 .main_body__content_area {
-  padding: 1rem 20% 2rem 20%;
+  padding: 1rem 1rem 2rem 1rem;
+  @include breakpoint(450px) {
+      padding-right: 10%;
+      padding-left: 10%;
+    }
+  @include breakpoint(medium) {
+    padding-right: 15%;
+    padding-left: 15%;
+  }
+
+  @include breakpoint(large) {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
 
   &#video_container {
     background: $success-color;
@@ -36,6 +48,7 @@
     h4 {
       padding-top: 1rem;
       display: block;
+      margin-bottom: 1rem;
     }
     p {
       margin-bottom: 0;
@@ -53,9 +66,6 @@
 // Individual subpage code
 #courses {
   img {
-    width: 50%;
-  }
-  img.image__width_40 {
     width: 40%;
   }
 }
