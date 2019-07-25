@@ -1,7 +1,7 @@
 // Footer
 
 footer {
-  background: #418fc4 url("/assets/img/Mountains_from_logo_for_footer_short.png") top center no-repeat;
+  background: #3479A8 url("/assets/img/Mountains_from_logo_for_footer_short.png") top center no-repeat;
   background-size: 100vw;
   padding: 5rem 2rem 1rem 2rem;
   @include breakpoint(medium) {
@@ -13,7 +13,7 @@ footer {
     color: $white;
     white-space: nowrap;
     &:hover {
-      color: orange;
+      color: $dark-black;
     }
   }
 

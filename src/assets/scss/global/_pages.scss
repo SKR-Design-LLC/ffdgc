@@ -20,6 +20,27 @@
 
 .main_body__content_area {
   padding: 1rem 20% 2rem 20%;
+
+  &#video_container {
+    background: $success-color;
+    text-align: center;
+    z-index: 0;
+    color: $white;
+    h4 {
+      padding-top: 1rem;
+      display: block;
+    }
+    p {
+      margin-bottom: 0;
+    }
+    a {
+      color: $white;
+      &:hover {
+        color: $dark-black;
+      }
+    }
+  }
+
 }
 
 // Individual subpage code

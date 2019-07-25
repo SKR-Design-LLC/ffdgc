@@ -34,22 +34,3 @@ footer { grid-area: footer; }
     'main main main main main main'
     'footer footer footer footer footer footer';
 }
-
-
-
-.main_body__content_area#video_container {
-  background: #000;
-  text-align: center;
-  z-index: 0;
-  color: $white;
-  h4 {
-    padding-top: 1rem;
-    display: block;
-  }
-  a {
-    color: $white;
-    &:hover {
-      color: $primary-color;
-    }
-  }
-}

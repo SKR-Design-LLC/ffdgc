@@ -5,9 +5,9 @@ nav {
   margin:0;
   padding: 0;
   font-family: $header-font-family;
-  background: $primary-color;
+  background: $secondary-color;
   opacity: 0.8;
-  color: $white;
+  color: $dark-black;
   z-index: 10;
 
 
@@ -58,10 +58,10 @@ nav {
       color: $white;
       display: block;
       &.yellow {
-        color: orange
+        color: $dark-black;
       }
       &:hover {
-        color: orange;
+        color: $dark-black;
         cursor: pointer;
       }
       /* Hide the link that should open and close the topnav on small screens */
@@ -106,7 +106,6 @@ nav {
 
     @include breakpoint(medium) {
       display: grid;
-      background-color: $primary-color;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
       grid-template-rows: 1fr;
       justify-items: stretch;
@@ -127,16 +126,16 @@ nav {
       }
 
       a {
-        color: $black;
+        color: $dark-black;
         @include breakpoint(medium) {
           color: $white;
         }
         text-decoration: none;
         &:hover {
           opacity: 1;
-          color: $primary-color;
+          color: darken($secondary-color, 8%);
           @include breakpoint(medium) {
-            color: orange;
+            color: $dark-black;
           }
           text-decoration: underline;
         }
