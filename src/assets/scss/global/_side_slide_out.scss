@@ -1,0 +1,97 @@
+// Side Slide Out on homepage
+.side_slide_out {
+  //position: fixed;
+  top: 120px;
+  z-index: 4;
+  background: $white;
+  width: 300px;
+  padding: 1.65rem 1.5rem 1.5rem .75rem;
+
+  border: 5px solid $dark-black;
+  border-left: 0;
+
+  border-top-right-radius: 10%;
+  border-bottom-right-radius: 10%;
+
+  &.open {
+    left: 0;
+    .side_slide_out__title {
+      text-decoration: underline;
+    }
+  }
+  &.closed {
+    left: -263px;
+  }
+
+  &__title {
+    transform: rotate(90deg);
+    position: absolute;
+    right:-3.4rem;
+    top: 4rem;
+    margin-top: .65rem;
+    color: $primary-color;
+
+    h5 {
+      @include breakpoint(small) {
+        font-size: 1.095rem;
+      }
+      @include breakpoint(medium) {
+        font-size: 1.095rem;
+      }
+    }
+
+
+    &:hover {
+      cursor: pointer;
+      color: $dark-black;
+      text-decoration: underline;
+    }
+    &.black {
+      color: $dark-black;
+    }
+  }
+
+  &__list {
+    ol {
+      list-style-type: none;
+      list-style-type: decimal;
+      // IE 7- hack
+
+      padding: 0;
+      counter-reset: li-counter;
+
+      margin: -.5rem 1rem -1rem 1.25rem;
+
+      li {
+        background-color: $primary-color;//#c5c5c5;// $white;//$medium-gray;
+        color: $white;
+        position: relative;
+        margin-bottom: 0.5rem;
+        padding: 0 0.5rem;
+        min-height: 1rem;
+
+        &:before {
+          position: absolute;
+          top: -.5rem;
+          left: -1.45rem;
+          width: 1.75rem;
+          height: 1.75rem;
+
+          font-size: 1.25rem;
+          line-height: 1.2;
+          text-align: center;
+          color: $white;
+
+          border: 3px solid orange;// #c5c5c5;
+          border-radius: 50%;
+          background-color: $primary-color;//#969696;
+          content: counter(li-counter);
+          counter-increment: li-counter;
+      }
+
+      }
+    }
+  }
+
+
+}
