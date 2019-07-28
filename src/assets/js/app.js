@@ -22,7 +22,6 @@ $(window).on("scroll", function(e){
         if ($(window).scrollTop() >= stickyTop) {
             $(".sticky_nav").css({position: "fixed", top: "0px"});
             $(".home_body").css({padding: "5.2rem 0 2rem 0"});
-            $(".side_slide_out").css({position: "fixed"});
         } else {
             $(".sticky_nav").css({position: "relative", top: "0px"});
             $(".home_body").css({padding: "0 0 2rem 0"});
