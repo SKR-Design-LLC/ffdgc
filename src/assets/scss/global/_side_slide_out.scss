@@ -54,18 +54,20 @@
         @include breakpoint(medium) {
           font-size: 23px;
         }
+
+        &:hover {
+          cursor: pointer;
+          color: $dark-black;
+          text-decoration: underline;
+        }
+        &.black {
+          color: $dark-black;
+        }
       }
     }
 
 
-    &:hover {
-      cursor: pointer;
-      color: $dark-black;
-      text-decoration: underline;
-    }
-    &.black {
-      color: $dark-black;
-    }
+
 
 
     &__list {
