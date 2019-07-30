@@ -7,7 +7,6 @@ nav {
   font-family: $header-font-family;
   background: rgba(4, 92, 151, 0.8);
   color: $dark-black;
-  height: 108px;
   z-index: 10;
 
 
@@ -82,10 +81,12 @@ nav {
 }
 /* end nav */
 
-
+  #home {
     nav.main_nav {
+      height: 108px;
       position: relative;
     }
+  }
 
 
   #main__nav_ul {
