@@ -16,12 +16,11 @@ require('foundation-sites');
 
 $(document).foundation();
 
-
-$(window).on("scroll", function(e){
-  var stickyTop = $(".sticky_nav").offset().top;
+var stickyTop = $(".sticky_nav").offset().top;
+$(window).on("scroll", function(){
         if ($(window).scrollTop() >= stickyTop) {
             $(".sticky_nav").css({position: "fixed", top: "0px"});
-            $(".home_body").css({padding: "5.2rem 0 2rem 0"});
+            $(".home_body").css({padding: "5.1rem 0 2rem 0"});
         } else {
             $(".sticky_nav").css({position: "relative", top: "0px"});
             $(".home_body").css({padding: "0 0 2rem 0"});
