@@ -34,9 +34,10 @@
 
       gtag('config', 'UA-144575262-1');
     </script>
+
   </head>
 
-  <body id="home">
+  <body id="home" class="home">
 
 
     <div class="parallax_content">
@@ -60,6 +61,22 @@
     </div>
 
   <script src="{{root}}assets/js/app.js"></script>
+  <script src="{{root}}assets/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      var stickyTop = $(".sticky_nav").offset().top;
+      $(window).on("scroll", function(){
+              if ($(window).scrollTop() >= stickyTop) {
+                  $(".sticky_nav").css({position: "fixed", top: "0px"});
+                  $(".home_body").css({padding: "5.1rem 0 2rem 0"});
+              } else {
+                  $(".sticky_nav").css({position: "relative", top: "0px"});
+                  $(".home_body").css({padding: "0 0 2rem 0"});
+                  $(".side_slide_out").css({position: "relative"});
+              }
+      });
+    });
+  </script>
 
   <script>
     var d = new Date();

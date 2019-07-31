@@ -6,27 +6,14 @@ import 'what-input';
 // it would execute earlier than we have assigned the global variable.
 // This is why we have to use CommonJS require() here since it doesn't
 // have the hoisting behavior.
-window.jQuery = $;
-require('foundation-sites');
+// window.jQuery = $;
+// require('foundation-sites');
 
 // If you want to pick and choose which modules to include, comment out the above and uncomment
 // the line below
-//import './lib/foundation-explicit-pieces';
-
+import './lib/foundation-explicit-pieces';
 
 $(document).foundation();
-
-var stickyTop = $(".sticky_nav").offset().top;
-$(window).on("scroll", function(){
-        if ($(window).scrollTop() >= stickyTop) {
-            $(".sticky_nav").css({position: "fixed", top: "0px"});
-            $(".home_body").css({padding: "5.1rem 0 2rem 0"});
-        } else {
-            $(".sticky_nav").css({position: "relative", top: "0px"});
-            $(".home_body").css({padding: "0 0 2rem 0"});
-            $(".side_slide_out").css({position: "relative"});
-        }
-});
 
 $(".dropbtn").on("click", function() {
   $(".dropdown-content").toggleClass("responsive");
