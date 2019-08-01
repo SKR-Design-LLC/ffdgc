@@ -12,11 +12,19 @@
 	z-index: 4;
 	background: $white;
   margin-top: 33vh;
+
   @include breakpoint(mid-medium) {
     margin-top: 42vh;
   }
+  @include breakpoint(landscape mid-medium) {
+    margin-top: 80vh;
+  }
   @include breakpoint(medium) {
-	margin-top: 100vh;
+	  margin-top: 100vh;
+  }
+
+  @include breakpoint(landscape large) {
+    margin-top: 100vh;
   }
 }
 
