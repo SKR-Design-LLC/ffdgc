@@ -12,6 +12,9 @@
 	z-index: 4;
 	background: $white;
   margin-top: 33vh;
+  @include breakpoint(mid-medium) {
+    margin-top: 42vh;
+  }
   @include breakpoint(medium) {
 	margin-top: 100vh;
   }

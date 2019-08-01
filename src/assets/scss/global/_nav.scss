@@ -142,6 +142,7 @@ nav {
         &:hover, &:active, &:focus {
           opacity: 1;
           color:#0a3055;
+          cursor: pointer;
           @include breakpoint(medium) {
             color: $dark-black;
           }

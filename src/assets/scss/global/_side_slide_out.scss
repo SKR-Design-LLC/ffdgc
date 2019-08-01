@@ -87,8 +87,13 @@
           position: relative;
           margin-bottom: 0.5rem;
           padding: 0 0.5rem;
-          min-height: 1rem;
-          width: max-content;
+          min-height: 1.7rem;
+          font-size: 21px!important;
+          width: 202px;
+
+          p, h1, h2, h3, h4, h5, h6 {
+            font-size: 21px!important;
+          }
 
           &:before {
             position: absolute;

@@ -23,6 +23,12 @@
       margin-top: 0;
     }
   }
+  img.img_full_height {
+    @include breakpoint(medium) {
+      margin-top: 0;
+      max-height: inherit;
+    }
+  }
 
   figcaption {
     font-size: small;
@@ -82,6 +88,6 @@
   }
 }
 
-img.width40 {
+img.img_width_40_percent {
   width: 40%;
 }
