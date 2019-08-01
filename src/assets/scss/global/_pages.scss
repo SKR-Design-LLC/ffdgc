@@ -14,10 +14,13 @@
     min-height: 0;
     width: 100vw;
     margin-top: 108px;
-    @include breakpoint(medium) {
+    @include breakpoint(medium only) {
       margin-top: 0;
       min-height: 300px;
       max-height: 600px;
+    }
+    @include breakpoint(large) {
+      margin-top: 0;
     }
   }
 
