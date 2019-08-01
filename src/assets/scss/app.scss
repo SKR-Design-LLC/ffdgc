@@ -112,3 +112,8 @@ a {
 .hidden {
   display: none;
 }
+
+figcaption {
+  font-size: $small-font-size;
+  font-style: italic;
+}

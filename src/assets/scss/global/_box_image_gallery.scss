@@ -13,6 +13,13 @@
 
   li {
     justify-self: stretch;
+    p {
+      line-height: inherit;
+      margin-bottom: 0;
+      font-size: 0;
+      display: contents;
+      display: inline;
+    }
     img {
       width: 100%;
       height: 100%;

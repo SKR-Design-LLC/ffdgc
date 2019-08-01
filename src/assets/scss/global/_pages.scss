@@ -5,12 +5,20 @@
   }
 }
 
+#about-us {
+  margin-bottom: 4rem;
+}
 // Subpage top image
 .main__top_image {
   img {
-    min-height: 300px;
-    max-height: 600px;
+    min-height: 0;
     width: 100vw;
+    margin-top: 108px;
+    @include breakpoint(medium) {
+      margin-top: 0;
+      min-height: 300px;
+      max-height: 600px;
+    }
   }
 
   figcaption {
@@ -69,4 +77,8 @@
   img {
     width: 40%;
   }
+}
+
+img.width40 {
+  width: 40%;
 }

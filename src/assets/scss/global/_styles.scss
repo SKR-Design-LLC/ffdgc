@@ -38,11 +38,15 @@ footer { grid-area: footer; }
 // Typograghy
 .main_body__content_area {
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    @include breakpoint(medium) {
+      margin-bottom: 2rem;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
     letter-spacing: .05rem;
   }
+
 
 }
