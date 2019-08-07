@@ -19,10 +19,19 @@ $(".dropbtn").on("click", function() {
   $(".dropdown-content").toggleClass("responsive");
   $(".main_nav__mobile_menu_arrows").toggleClass("show-inline hidden");
   $(".main_nav__mobile_menu_close").toggleClass("show-inline hidden");
-  $(".dropbtn").toggleClass("yellow");
+
+  $(this).attr("aria-expanded", function (i, attr) {
+    return attr == "true" ? "false" : "true";
+  });
+
 });
 
 $(".side_slide_out__title").on("click", function() {
   $(".side_slide_out").toggleClass("open closed");
   $(".side_slide_out__title").toggleClass("black");
+  $(".side_slide_out__title_span_close").toggleClass("show-inline hidden");
+
+  $(this).attr("aria-expanded", function (i, attr) {
+    return attr == "true" ? "false" : "true";
+  });
 });

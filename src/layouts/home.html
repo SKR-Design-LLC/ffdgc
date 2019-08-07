@@ -40,13 +40,14 @@
 
   <body id="home" class="home">
 
+    <div id="skiptocontent"><a href="#main_content">Skip navigation to main content</a></div>
 
     <div class="parallax_content">
         {{> header}}
     </div>
 
     <div class="parallax_covered grid_container main" id="pageTop">
-      <nav class="main_nav sticky_nav">
+      <nav class="main_nav sticky_nav" aria-label="Main Navigation" role="navigation">
         {{> nav}}
         {{> slide_out}}
       </nav>

@@ -38,25 +38,26 @@
   </head>
 
   <body class="subpage">
+    <div id="skiptocontent"><a href="#main_content">Skip navigation to main content</a></div>
 
-  <div class="grid_container main" id="pageTop">
-      <nav class="main_nav">
-        {{> nav}}
-      </nav>
+    <div class="grid_container main" id="pageTop">
+        <nav class="main_nav" aria-label="Main Navigation" role="navigation">
+          {{> nav}}
+        </nav>
 
-        {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
-        <div class="main__container">
-              {{> body}}
-        </div>
-        {{> footer}}
+          {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+          <div class="main__container">
+                {{> body}}
+          </div>
+          {{> footer}}
 
-  </div>
+    </div>
 
-  <script src="{{root}}assets/js/app.js"></script>
-  <script>
-    var d = new Date();
-    var n = d.getFullYear();
-    document.getElementById("year").innerHTML = n;
-  </script>
+    <script src="{{root}}assets/js/app.js"></script>
+    <script>
+      var d = new Date();
+      var n = d.getFullYear();
+      document.getElementById("year").innerHTML = n;
+    </script>
   </body>
 </html>

@@ -42,6 +42,25 @@ nav {
     place-self: center start;
 
     display: block;
+    &:hover:after {
+      position: absolute;
+      content:"HOME";
+      top:0;
+      left:0;
+      width:9.8rem;
+      height:4rem;
+      border: 3px solid $white;
+      background-color: #367cab;
+      opacity:1;
+      margin-top: .6rem;
+      margin-left: .6rem;
+      padding-left: 2.6rem;
+      border-radius: 50%;
+      font-size: 1.75rem;
+      line-height: 2.0;
+      color: #000;
+      text-decoration: underline;
+    }
     /* Hide the link that should open and close the topnav on small screens */
     @include breakpoint(medium) {
       display: none;
@@ -157,6 +176,8 @@ nav {
         display: none;
         @include breakpoint(medium) {
           display: block;
+            position: relative;
+
         }
         &__mobile {
           display: block;
@@ -177,3 +198,20 @@ nav {
 
 
   }
+.nav__logo a:hover:after {
+  position: absolute;
+  content:"HOME";
+  top:0;
+  left:0;
+  width:85%;
+  height:84%;
+  border: 3px solid $white;
+  background-color: #367cab;
+  opacity:1;
+  margin:.4rem .9rem 0 .9rem;
+  border-radius: 50%;
+  font-size: 1.75rem;
+  line-height: 2.2;
+  color: #000;
+  text-decoration: underline;
+}

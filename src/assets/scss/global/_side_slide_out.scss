@@ -41,12 +41,12 @@
   }
 
   &__title {
-    margin-top: -7.5rem;
+    margin-top: -8.5rem;
     margin-left: 2.095rem;
       @include breakpoint(medium) {
         margin-left: 1rem;
       }
-    & span {
+    &_span {
       display: block;
       transform: rotate(90deg);
       white-space: nowrap;
@@ -60,9 +60,19 @@
           cursor: pointer;
           color: $dark-black;
           text-decoration: underline;
+          > .side_slide_out__title_span_close {
+            cursor: pointer;
+            color: $dark-black;
+            text-decoration: underline;
+          }
         }
         &.black {
           color: $dark-black;
+        }
+
+        &_close {
+          color:firebrick;
+          font-size: .9rem;
         }
       }
     }
@@ -120,4 +130,8 @@
     }
 
 
+}
+
+.side_slide_out__title.black {
+  margin-top: -11rem;
 }
